@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container text-center">
+    <h1 class="jumbotron">Mission to Mars
+        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape</a></p>
+    </h1>
+  </div>
+    
+  
+  <div class="container" >
+        <h2 class="left">Latest Mars News</h2>
+        <p>{{ vacation.news_title }}</p>
+    <p>{{ vacation.news_p }}</p>
+</div>
+
+
+<div class="container" class ='row'>
+  
+    <h2>Featured Mars Image</h2>
+    <img src="{{ vacation.featured_image_url }}" alt="Sloth">
+
+
+   
+    <h3>Mars Facts</h3>
+    
+      {{table_info}}
+          
+    
+   
+</div>
+
+    
+   <div class='container'>
+       <h1>Mars Hemispheres</h1>
+       
+       <div class="container">
+           
+        <div class="row">
+          {% for i in vacation.img_images %}
+       <img src="{{ i.img_url }}" alt="Sloth">
+       {% endfor %}
+        </div>
+        <div class="row">
+          
+        </div>
+      
+       </div>
+  
+     
+   </div>
+    
+      
+    
+  
+</body>
+
+</html>
